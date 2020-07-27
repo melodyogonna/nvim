@@ -254,3 +254,18 @@ let g:coc_snippet_next = '<c-j>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
+
+let g:coc_global_extensions = [
+\ 'coc-snippets',
+\ 'coc-json',
+\ 'coc-tsserver',
+\ 'coc-html',
+\ 'coc-css',
+\ 'coc-python',
+\ 'coc-vetur',
+\ 'coc-eslint',
+\ 'coc-emmet',
+\ 'coc-prettier',
+\ 'coc-pairs',
+\ 'coc-tslint'
+\ ]
