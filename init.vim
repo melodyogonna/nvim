@@ -64,11 +64,7 @@ endif
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let mapleader = " "
-let g:netrw_browse_split=2
-let g:netrw_banner = 0
 
-
-inoremap \<cr> <cr><c-o>O
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -233,7 +229,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 nnoremap <silent> <C-t> :TagbarToggle<CR>
 
-let g:python_highlight_all = 1
 let g:coc_filetype_map = {'htmldjango': 'html'}
 let test#strategy = "dispatch"
 let test#python#pyunit#executable = 'python3 -m unittest'
@@ -244,16 +239,10 @@ nnoremap <leader>ts :TestSuite<CR>
 nnoremap <leader>tl :TestLast<CR>
 nnoremap <leader>tv :TestVisit<CR>
 
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<c-j>'
-
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
 
 let g:coc_global_extensions = [
 \ 'coc-snippets',
