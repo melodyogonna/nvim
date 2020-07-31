@@ -25,6 +25,10 @@ set autoindent
 set cursorline
 set autoread
 
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 runtime macros/matchit.vim
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -43,7 +47,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/MatchTagAlways'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-python/python-syntax'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-dispatch'
@@ -51,6 +54,9 @@ Plug 'vim-test/vim-test'
 Plug 'machakann/vim-sandwich'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'honza/vim-snippets'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
