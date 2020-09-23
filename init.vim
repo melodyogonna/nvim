@@ -57,6 +57,7 @@ Plug 'honza/vim-snippets'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'metakirby5/codi.vim'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -263,6 +264,12 @@ nnoremap <leader>gt :GoTest<CR>
 let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<c-j>'
+
+function! GitStatus()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf('+%d ~%d -%d', a, m, r)
+endfunction
+set statusline+=%{GitStatus()}
 
 let g:coc_global_extensions = [
 \ 'coc-snippets',
