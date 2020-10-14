@@ -14,7 +14,6 @@ set nobackup
 set undodir=~/.nvim/undodir
 set undofile
 set incsearch
-set incsearch
 set foldmethod=indent
 set foldlevel=99
 set textwidth=79
@@ -24,6 +23,7 @@ set fileformat=unix
 set autoindent
 set cursorline
 set autoread
+" set spell spelllang=en_gb
 
 if (has("termguicolors"))
   set termguicolors
@@ -34,15 +34,14 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 
 call plug#begin('~/.nvim/plugged')
-Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'tmhedberg/SimpylFold'
+Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
-Plug 'liuchengxu/space-vim-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/MatchTagAlways'
@@ -52,12 +51,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-test/vim-test'
 Plug 'machakann/vim-sandwich'
-Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'honza/vim-snippets'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'metakirby5/codi.vim'
+Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -286,3 +283,5 @@ let g:coc_global_extensions = [
 \ 'coc-tslint',
 \ 'coc-go'
 \ ]
+
+let g:python_highlight_all = 1

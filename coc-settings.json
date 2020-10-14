@@ -9,7 +9,9 @@
     "vue",
     "python",
     "json",
-    "php"
+    "php",
+    "yml",
+    "typescript"
   ],
   "coc.preferences.bracketEnterImprove": true,
   "python.jediEnabled": false,
