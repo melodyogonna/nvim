@@ -11,7 +11,8 @@
     "json",
     "php",
     "yml",
-    "typescript"
+    "typescript",
+    "dart"
   ],
   "coc.preferences.bracketEnterImprove": true,
   "python.jediEnabled": false,

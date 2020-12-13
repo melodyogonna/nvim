@@ -7,7 +7,7 @@ set expandtab
 set smartindent
 set rnu
 set nu
-set wrap
+set nowrap
 set smartcase
 set noswapfile
 set nobackup
@@ -23,7 +23,9 @@ set fileformat=unix
 set autoindent
 set cursorline
 set autoread
-" set spell spelllang=en_gb
+set splitbelow
+set splitright
+set mouse=a
 
 if (has("termguicolors"))
   set termguicolors
@@ -46,7 +48,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/MatchTagAlways'
 Plug 'scrooloose/nerdtree'
-Plug 'KabbAmine/vCoolor.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-test/vim-test'
@@ -55,10 +56,12 @@ Plug 'honza/vim-snippets'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'flazz/vim-colorschemes'
+Plug 'justinmk/vim-sneak'
+Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
-colorscheme dracula
+colorscheme nord
 set background=dark
 
 
@@ -235,7 +238,6 @@ nnoremap <silent> <C-t> :TagbarToggle<CR>
 
 let g:coc_filetype_map = {'htmldjango': 'html'}
 let test#strategy = "dispatch"
-let test#python#pyunit#executable = 'python3 -m unittest'
 
 " mapping for vim-test
 nnoremap <leader>tn :TestNearest<CR>
@@ -280,8 +282,13 @@ let g:coc_global_extensions = [
 \ 'coc-emmet',
 \ 'coc-prettier',
 \ 'coc-pairs',
-\ 'coc-tslint',
 \ 'coc-go'
 \ ]
 
 let g:python_highlight_all = 1
+
+" Remap split keys
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
