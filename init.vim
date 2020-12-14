@@ -32,7 +32,6 @@ if (has("termguicolors"))
 endif
 
 runtime macros/matchit.vim
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 
 call plug#begin('~/.nvim/plugged')
@@ -58,12 +57,14 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'flazz/vim-colorschemes'
 Plug 'justinmk/vim-sneak'
 Plug 'psliwka/vim-smoothie'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 colorscheme nord
 set background=dark
 
+highlight normal ctermbg=none guibg=none
 
 if executable('rg')
     let g:rg_derive_root='true'
